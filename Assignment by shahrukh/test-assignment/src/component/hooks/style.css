@@ -1,0 +1,18 @@
+body {
+    background-image: linear-gradient(orange ,  #fff);
+    height: 100vh;
+}
+
+.center-div {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+.button2 {
+   display: flex;
+}
