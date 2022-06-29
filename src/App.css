@@ -1,8 +1,13 @@
+.container-header {
+  display: flex;
+  justify-content: center;
+}
 .cart {
   display: flex;
   justify-content: center;
-  font-size: 10mm;
+  font-size:10mm;
   font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
 }
 
 .container {
@@ -16,7 +21,7 @@
   text-decoration: none;
   border-radius: 10px;
   padding: 2%;
-  width: 25%;
+  width: 17%;
   justify-content: space-evenly;
   display: flex;
   margin: 2%;
@@ -71,4 +76,49 @@
   border-radius: 5px;
   padding: 1%;
   color: #fff;
+}
+.add-cart:hover {
+  color: #000;
+  background-color: rgba(211, 211, 211, 0.603);
+}
+.cart-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 8mm;
+  width: 14%;
+}
+.filter-container {
+  display: flex;
+  align-items: end;
+    justify-content: end;
+    padding: -10px 0px;
+    height: 100%;
+    width: 84%;
+}
+.filter-btn {
+  display: flex;
+}
+.drop-down {
+  display: flex;
+  width: 26mm;
+    border-radius: 10px;
+    height: 6mm;
+}
+.filter-btn {
+  display: flex;
+  color: #fff;
+  background-color: red;
+  width: 15mm;
+  border-radius: 21px;
+  border: none;
+  padding: 5px  10px;
+}
+.ss-img {
+  display: flex;
+    width: 4%;
+    height: 10%;
+    justify-content: center;
+    align-items: center;
+    margin: 28px 42px;
 }

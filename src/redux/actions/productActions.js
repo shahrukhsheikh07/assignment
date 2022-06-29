@@ -14,3 +14,10 @@ export const selectedProduct = (product) => {
         payload: product,
     };
 };
+
+export const addToCart = (quantity) => {
+    return {
+        type:ActionTypes.ADD_TO_CART,
+        payload:quantity,
+    }
+}

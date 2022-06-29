@@ -3,9 +3,11 @@ import axios from 'axios'
 import { useDispatch, useSelector } from 'react-redux';
 import ProductComponent from './ProductComponent';
 import {setProducts} from '../redux/actions/productActions';
+import { selectedProduct  } from '../redux/actions/productActions';
+import PriceFilter from './PriceFilter';
 
 const ProductListing = () => { 
-  const products = useSelector ((state) => state);
+  const products = useSelector ((state) => state.product);
   const dispatch = useDispatch();
 
   const fetchProducts = async () => {
@@ -14,6 +16,17 @@ const ProductListing = () => {
     })
    dispatch(setProducts(response.data));
   }
+
+  const applyFilter = (currentFilter) =>{
+    // const prod = products;
+    console.log("Apply invoked", products, currentFilter);
+
+    const filteredResult = products.filter((item)=>{
+        return item.price > currentFilter;
+      })
+      console.log("filtered result", filteredResult);
+    dispatch(selectedProduct(filteredResult));
+}
 
   useEffect(() => {
     fetchProducts();
@@ -25,7 +38,8 @@ const ProductListing = () => {
     
     <>
     <div className='container'>
-    <ProductComponent/>
+      <PriceFilter applyFilter={applyFilter}/>
+      <ProductComponent/>
     </div>
     
     

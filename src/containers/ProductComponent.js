@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link, link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import { useSelector } from 'react-redux'
 
 const ProductComponent = () => {
@@ -13,7 +13,7 @@ const ProductComponent = () => {
           <div className='image-container'> <img  className='image' src = {image} alt={title} /> </div>
           <div className='content'>
               <div className='header'>{title}</div>
-            <div className='meta-price'>${price}</div> 
+            <div className='meta-price'>₹{price}</div> 
             <div className='category'>{category}</div> 
 
           </div>
